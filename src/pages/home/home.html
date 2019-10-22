@@ -1,14 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Personajes
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-list-header>
+      Infinity War
+    </ion-list-header>
+    <ion-item *ngFor="let personaje  of personajes">
+      <ion-avatar item-start>
+        <img [src]="personaje.avatar">
+      </ion-avatar>
+      <h2>{{personaje.nombre}}</h2>
+      <p (click)="clickFoto(personaje.actor, personaje.foto)">{{personaje.actor}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>
