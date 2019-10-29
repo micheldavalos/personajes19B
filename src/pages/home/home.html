@@ -1,22 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Personajes
+    <ion-title style="background-color: #5BC0EB">
+      <h2 style="color: #FA7921">Personajes</h2>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="background-color: #5BC0EB">
   <ion-list>
-    <ion-list-header>
+    <ion-list-header style="background-color: #FDE74C">
       Infinity War
     </ion-list-header>
-    <ion-item *ngFor="let personaje  of personajes">
+    <ion-item *ngFor="let personaje  of personajes" style="background-color: #9BC53D">
       <ion-avatar item-start>
         <img [src]="personaje.avatar">
       </ion-avatar>
       <h2>{{personaje.nombre}}</h2>
-      <p (click)="clickFoto(personaje.actor, personaje.foto)">{{personaje.actor}}</p>
+      <p (click)="clickFoto(personaje.actor, personaje.foto)" style="color: white">
+        {{personaje.actor}}
+      </p>
+      <ion-row>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+      </ion-row>
     </ion-item>
   </ion-list>
 </ion-content>
